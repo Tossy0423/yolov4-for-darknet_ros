@@ -23,8 +23,10 @@ YOLO V4をdarknet_rosへ移植して使えるようにした環境です。
 ## Create workspace for ROS, Change directory
 $ mkdir -p workspace/src && cd workspace/src
 
-##
+## init workspace
 $ catkin_init_workspace
+
+## Make
 $ cd ../
 $ catkin_make
 ```
@@ -43,6 +45,13 @@ $ git clone --recursive https://github.com/Tossy0423/yolov4-for-darknet_ros.git
 ```bash
 $ git clone https://github.com/Tossy0423/darknet.git
 $ git clone https://github.com/Tossy0423/darknet_ros.git
+```
+このやり方の場合、フォルダのツリー構造は以下のようになります、
+```
+src
+├── darknet
+│
+├── darknet_ros
 ```
 
 ## Download weights file
