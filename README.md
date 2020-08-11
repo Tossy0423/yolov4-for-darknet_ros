@@ -138,7 +138,8 @@ This software is released under the MIT License, see LICENSE.
   - [ ] Getting your environment ready to run in the Docker Container. :whale:
 
 # History
-
+  - 11. Aug. 2020<br>
+    I've roughly summarized everything from environment building to manual creation
 
 # Autor
 Tossy
