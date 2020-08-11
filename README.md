@@ -7,27 +7,48 @@ darknet_ros上でYOLO V4を動かせるようにしたリポジトリです。
 
 ## Create workspace
 まずROSのワークスペースを生成します。`<workspace>`は任意の名前をつけてください。
->$ mkdir -p workspace/src
->$ cd workspace/src
-
+```bash
+$ mkdir -p workspace/src
+$ cd workspace/src
+$ catkin_init_workspace
+$ cd ../
+$ catkin_make
+```
 
 ## Instalution your enviroment
 ### Easy Instalution
 `darknet`と`darknet_ros`をsubmoduleとして扱うためには、`--recursive`をつけてcloneしてください。
 これによりsubmoduleである2つのリポジトリをまとめてcloneすることができます。
-> git clone --recursive https://github.com/Tossy0423/yolov4-for-darknet_ros.git
+```bash
+$ cd src
+$ git clone --recursive https://github.com/Tossy0423/yolov4-for-darknet_ros.git
+```
 
 ### `darknet`と`darknet_ros`をsubmoduleとして扱わずclone
 `darknet`と`darknet_ros`をsubmoduleとして扱わないためには、２つのリポジトリを別々にcloneする必要があります。
->$ git clone https://github.com/Tossy0423/darknet.git
->$ git clone https://github.com/Tossy0423/darknet_ros.git
+```bash
+$ git clone https://github.com/Tossy0423/darknet.git
+$ git clone https://github.com/Tossy0423/darknet_ros.git
+```
+## Download `weights` file
+weightsは大きので別でダウンロードする必要がある
+```bash
+$ cd yolov4darknet/src/yolov4-for-darknet_ros/darknet_ros/darknet_ros/yolo_network_config/weights
+$ wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
+```
+
 
 ## make pkg
-> $ cd workspace
-> $ catkin_make
+```bash
+# Change workspace directory
+$ cd workspace
 
-> echo "source ~/workspace/devel/setup.bash" >> ~/.bashrc
+## Make
+$ catkin_make
 
+# Write source command in ~/.bashrc
+$ echo "source ~/workspace/devel/setup.bash" >> ~/.bashrc
+```
 
 
 # Enviroment
