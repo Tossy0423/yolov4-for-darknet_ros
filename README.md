@@ -1,5 +1,17 @@
+<!--
+[![people](readmemedia/people.png)](https://www.pexels.com/photo/woman-falling-in-line-holding-each-other-1206059/ "people")\
+[![birds](readmemedia/birds.png)](https://www.pexels.com/photo/flock-of-white-and-black-birds-on-ground-4023267/ "birds")\
+-->
+
+<div align = "center">
+<img src="readmemedia/birds.png" width=70%>
+<img src="readmemedia/people.png" width=70%>
+</div>
+
 # YOLO V4 for darknet_ros
-YOLO V4をdarknet_rosへ移植した環境のポジトリです.
+YOLO V4をdarknet_rosへ移植して使えるようにした環境です。
+
+
 
 # Installation
 このリポジトリを導入する環境ではすでに[ROS(Robot Operating System)](https://www.ros.org/)が導入されていることとします. ROSの導入方法は[ros.org](https://www.ros.org/install/)を参考にしてください. 私の[構築環境](#Enviroment)はこちらです.
@@ -19,7 +31,7 @@ $ catkin_make
 
 ## Installation your enviroment
 ### Easy Installation
-`darknet`と`darknet_ros`をsubmoduleとして扱うためには, `--recursive`をつけてcloneしてください.
+`darknet`と`darknet_ros`をsubmoduleとして扱うためには, `--recursive`をつけて　cloneしてください.
 これによりsubmoduleである2つのリポジトリをまとめてcloneすることができます.
 ```bash
 $ cd src
@@ -101,7 +113,9 @@ $ roscore
 $ rosrun uvc_camera uvc_camera_node
 $ roslaunch darknet_ros yolo_v4.launch
 ```
-
+<div align=center>
+<img src="readmemedia/camera.png" width=90%>
+</div>
 
 
 # How to build this enviroment??
@@ -117,6 +131,14 @@ $ roslaunch darknet_ros yolo_v4.launch
 # LISENCE
 このリポジトリはMIT Licenseを元にリリースしています. 詳しくは`LICENSE`ファイルをご覧ください.
 This software is released under the MIT License, see LICENSE.
+
+# Future Plans
+  私の気まぐれで改善していきます。
+  - [ ] Rewrite the readme file in English. :earth_americas:
+  - [ ] Getting your environment ready to run in the Docker Container. :whale:
+
+# History
+
 
 # Autor
 Tossy
