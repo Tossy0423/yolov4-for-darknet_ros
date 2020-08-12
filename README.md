@@ -9,12 +9,12 @@
 </div>
 
 # YOLO V4 for darknet_ros
-YOLO V4をdarknet_rosへ移植して使えるようにした環境です。
+YOLO V4をdarknet_rosへ移植して使えるようにした環境です.
 
 
 
 # Installation
-このリポジトリを導入する環境ではすでに[ROS(Robot Operating System)](https://www.ros.org/)が導入されていることとします. ROSの導入方法は[ros.org](https://www.ros.org/install/)を参考にしてください. 私の[構築環境](#Enviroment)はこちらです.
+このリポジトリを導入する環境では, すでに[ROS(Robot Operating System)](https://www.ros.org/)が導入されていることとします. ROSの導入方法は[ros.org](https://www.ros.org/install/)を参考にしてください. 私の[構築環境](#Enviroment)はこちらです.
 
 
 ## Create workspace
@@ -46,7 +46,7 @@ $ git clone --recursive https://github.com/Tossy0423/yolov4-for-darknet_ros.git
 $ git clone https://github.com/Tossy0423/darknet.git
 $ git clone https://github.com/Tossy0423/darknet_ros.git
 ```
-このやり方の場合、フォルダのツリー構造は以下のようになります、
+このやり方の場合, フォルダのツリー構造は以下のようになります,
 ```
 src
 ├── darknet
@@ -55,8 +55,8 @@ src
 ```
 
 ## Download weights file
-weightsはファイルサイズが大きので別でダウンロードする必要がある.
-weightsファイルを導入する場所は, `darknet_ros/darknet_ros/yolo_network_config/weights`にダウンロードする.
+weightsはファイルサイズが大きので別でダウンロードする必要があります.
+weightsファイルを導入する場所は, `darknet_ros/darknet_ros/yolo_network_config/weights`へダウンロードしてください.
 ```bash
 $ wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
 ```
@@ -93,12 +93,15 @@ $ echo "source ~/workspace/devel/setup.bash" >> ~/.bashrc
 
 
 # Demo
-ここまで実装したもののデモの方法を述べます.
-デモをする前にすべきことがあります.
+ここまで実装した環境でのデモの方法を述べます. デモをする前に準備すべきことがあります.
 
 ## Preparation
 - Web Camera<br>
-  ノートPCなどのようにすでに搭載されている場合は用意する必要はありません
+  ノートPCなどのようにすでに搭載されている場合は用意する必要はありません.
+  Terminalで
+  > $ ls /dev/video*
+
+  入力し表示があれば準備できています.　何も表示されなければ環境を整えてください.
 
 - `uvc_camera`のROSパッケージ<br>
   すでにインストールされている場合は再度行う必要はありません.
@@ -127,13 +130,13 @@ $ roslaunch darknet_ros yolo_v4.launch
 </div>
 
 
-# How to build this enviroment??
+# How to build this environment??
 この環境を構築するための手順を示したドキュメントをここに示します.
 
 
 # Acknowledgment
-このリポジトリを構成する大きなリポジトリは, [AlexeyAB](https://github.com/AlexeyAB)の[darknet](https://github.com/AlexeyAB/darknet), [leggedrobotics](https://github.com/leggedrobotics)の[darknet_ros](https://github.com/leggedrobotics/darknet_ros)で構成されています.
-またこの環境の構築には多くの開発者が公開してくれた情報を参考にしました.
+このリポジトリは, [AlexeyAB](https://github.com/AlexeyAB)の[darknet](https://github.com/AlexeyAB/darknet), [leggedrobotics](https://github.com/leggedrobotics)の[darknet_ros](https://github.com/leggedrobotics/darknet_ros)の大きなリポジトリで構成されています.
+またこの環境の構築には, 多くの開発者が公開してくれた情報を参考にしました.
 これらの素晴らしいリポジトリを公開してくださった開発者, 情報提供してくださった多くの開発者に感謝します.
 
 
@@ -142,7 +145,7 @@ $ roslaunch darknet_ros yolo_v4.launch
 This software is released under the MIT License, see LICENSE.
 
 # Future Plans
-  私の気まぐれで改善していきます。
+  私の気まぐれで改善していきます. 
   - [ ] Rewrite the readme file in English. :earth_americas:
   - [ ] Getting your environment ready to run in the Docker Container. :whale:
 
