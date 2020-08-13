@@ -14,7 +14,7 @@ YOLO V4をdarknet_rosへ移植して使えるようにした環境です.
 
 
 # Installation
-このリポジトリを導入する環境では, すでに[ROS(Robot Operating System)](https://www.ros.org/)が導入されていることとします. ROSの導入方法は[ros.org](https://www.ros.org/install/)を参考にしてください. 私の[構築環境](#Enviroment)はこちらです.
+このリポジトリを導入する環境では, すでに[ROS(Robot Operating System)](https://www.ros.org/)が導入されていることとします. ROSの導入方法は[ros.org](https://www.ros.org/install/)を参考にしてください. 私の[構築環境](#Environment)はこちらです.
 
 
 ## Create workspace
@@ -31,7 +31,7 @@ $ cd ../
 $ catkin_make
 ```
 
-## Installation your enviroment
+## Installation your environment
 ### Easy Installation
 `darknet`と`darknet_ros`をsubmoduleとして扱うためには, `--recursive`をつけて　cloneしてください.
 これによりsubmoduleである2つのリポジトリをまとめてcloneすることができます.
@@ -75,7 +75,7 @@ $ echo "source ~/workspace/devel/setup.bash" >> ~/.bashrc
 ```
 
 
-# Enviroment
+# Environment
 
 |         Topics         	|                     Spec                     	|
 |:----------------------:	|:--------------------------------------------:	|
