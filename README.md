@@ -66,8 +66,10 @@ src
 ```
 
 ## Download weights file
-weightsはファイルサイズが大きので別でダウンロードする必要があります.
-weightsファイルを導入する場所は, `darknet_ros/darknet_ros/yolo_network_config/weights`へダウンロードしてください.
+The weights file is very large and needs to be downloaded separately.
+<!-- weightsはファイルサイズが大きので別でダウンロードする必要があります. -->
+Download the weights file to `darknet_ros/darknet_ros/yolo_network_config/weights` to install it.
+<!-- weightsファイルを導入する場所は, `darknet_ros/darknet_ros/yolo_network_config/weights`へダウンロードしてください. -->
 ```bash
 $ wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
 ```
@@ -104,33 +106,40 @@ $ echo "source ~/workspace/devel/setup.bash" >> ~/.bashrc
 
 
 # Demo
-ここまで実装した環境でのデモの方法を述べます. デモをする前に準備すべきことがあります.
+I will describe how to demonstrate it in an implemented environment. Before you can do the demo, you need to prepare for it.
+<!-- ここまで実装した環境でのデモの方法を述べます. デモをする前に準備すべきことがあります. -->
 
 ## Preparation
 - Web Camera<br>
-  ノートPCなどのようにすでに搭載されている場合は用意する必要はありません.
-  Terminalで
+  You don't need to have it if it's already installed.
+  <!-- ノートPCなどのようにすでに搭載されている場合は用意する必要はありません. -->
+  At the Terminal
+  <!-- Terminalで -->
   > $ ls /dev/video*
 
-  入力し表示があれば準備できています.　何も表示されなければ環境を整えてください.
+  If you enter and display, you are ready to go.　If you do not see anything, prepare your environment.
+  <!-- 入力し表示があれば準備できています.　何も表示されなければ環境を整えてください. -->
 
-- `uvc_camera`のROSパッケージ<br>
-  すでにインストールされている場合は再度行う必要はありません.
-  インストールには, 以下のコマンドを実行してください
+- ROS package of `uvc_camera`<br>
+    If it has already been installed, there is no need to do it again. To install, execute the following command
+  <!-- すでにインストールされている場合は再度行う必要はありません.
+  インストールには, 以下のコマンドを実行してください -->
   ```bash
   $ sudo apt install ros-melodic-uvc-camera
   ```
-- launchファイルの変更 <br>
-  `uvc_camera`パッケージを使う場合, カメラ画像のTopicをdarknet_rosへ入力するために変更する必要があります.  任意のエディタで, `darknet_ros/darknet_ros/config/ros.yaml`を開いて以下のように変更します.
+- Fixing the launch file <br>
+  If you use the `uvc_camera` package, you need to change the Topic of the camera image to input to darknet_ros. Open the file `darknet_ros/darknet_ros/config/ros.yaml` and change the file as follows
+  <!-- `uvc_camera`パッケージを使う場合, カメラ画像のTopicをdarknet_rosへ入力するために変更する必要があります.  任意のエディタで, `darknet_ros/darknet_ros/config/ros.yaml`を開いて以下のように変更します. -->
   ```
-  ## 変更前
+  ## Before
   topic: /camera/rgb/image_raw
 
-  ## 変更後
+  ## After
   topic: /image_raw
   ```
 ## Running
-以下の3つのコマンドは別のTerminalで実行してください.
+Execute the three commands in another Terminal.
+<!-- 以下の3つのコマンドは別のTerminalで実行してください. -->
 ```bash
 $ roscore
 $ rosrun uvc_camera uvc_camera_node
@@ -142,27 +151,32 @@ $ roslaunch darknet_ros yolo_v4.launch
 
 
 # How to build this environment??
-この環境を構築するための手順を示したドキュメントをここに示します.
+Here is the documentation to set up this environment.
+<!-- この環境を構築するための手順を示したドキュメントをここに示します. -->
 
 
 # Acknowledgment
-このリポジトリは, [AlexeyAB](https://github.com/AlexeyAB)の[darknet](https://github.com/AlexeyAB/darknet), [leggedrobotics](https://github.com/leggedrobotics)の[darknet_ros](https://github.com/leggedrobotics/darknet_ros)の大きなリポジトリで構成されています.
+This repository consists of two large repositories, [AlexeyAB](https://github.com/AlexeyAB)'s [darknet](https://github.com/AlexeyAB/darknet) and [legged robotics](https://github.com/leggedrobotics)'s [darknet_ros](https://github.com/leggedrobotics/darknet_ros).
+For building this environment, I have a reference to the information published by many developers.
+I would like to thank the developers who made these repositories available to me, and many of them have contributed their information to make this environment possible.
+<!-- このリポジトリは, [AlexeyAB](https://github.com/AlexeyAB)の[darknet](https://github.com/AlexeyAB/darknet), [leggedrobotics](https://github.com/leggedrobotics)の[darknet_ros](https://github.com/leggedrobotics/darknet_ros)の大きなリポジトリで構成されています.
 またこの環境の構築には, 多くの開発者が公開してくれた情報を参考にしました.
-これらの素晴らしいリポジトリを公開してくださった開発者, 情報提供してくださった多くの開発者に感謝します.
+これらの素晴らしいリポジトリを公開してくださった開発者, 情報提供してくださった多くの開発者に感謝します. -->
 
 
 # LISENCE
-このリポジトリはMIT Licenseを元にリリースしています. 詳しくは`LICENSE`ファイルをご覧ください.
+<!-- このリポジトリはMIT Licenseを元にリリースしています. 詳しくは`LICENSE`ファイルをご覧ください. -->
 This software is released under the MIT License, see LICENSE.
 
 # Future Plans
-  私の気まぐれで改善していきます.
-  - [ ] Rewrite the readme file in English. :earth_americas:
+  I will improve it at my whim.
+  <!-- 私の気まぐれで改善していきます. -->
+  - [x] Rewrite the readme file in English. :earth_americas:
   - [ ] Getting your environment ready to run in the Docker Container. :whale:
 
 # History
-  - 11. Aug. 2020<br>
-    I've roughly summarized everything from environment building to manual creation
+  - I've roughly summarized everything from environment building to manual creation(11. Aug. 2020)
+  - Create an English version of the README(20. Aug. 2020)
 
 # Autor
 Tossy
