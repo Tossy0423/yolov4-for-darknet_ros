@@ -16,11 +16,15 @@ If you need the Japanese README file, please go [here](./documents/README_ja.md)
 
 
 # Installation
-このリポジトリを導入する環境では, すでに[ROS(Robot Operating System)](https://www.ros.org/)が導入されていることとします. ROSの導入方法は[ros.org](https://www.ros.org/install/)を参考にしてください. 私の[構築環境](#Environment)はこちらです.
+This repository assumes that the [Robot Operating System (ROS)](https://www.ros.org/) has already been installed on your environment. 
+See [ros.org](https://www.ros.org/install/) to know how to install ROS. My environment is [here](#Enviroment).
+
+<!-- このリポジトリを導入する環境では, すでに[ROS(Robot Operating System)](https://www.ros.org/)が導入されていることとします. ROSの導入方法は[ros.org](https://www.ros.org/install/)を参考にしてください. 私の[構築環境](#Environment)はこちらです. -->
 
 
 ## Create workspace
-まずROSのワークスペースを生成します. `<workspace>`は任意の名前をつけてください.
+First, create the ROS workspace. The `<workspace>` can be named arbitrarily.
+<!-- まずROSのワークスペースを生成します. `<workspace>`は任意の名前をつけてください. -->
 ```bash
 ## Create workspace for ROS, Change directory
 $ mkdir -p workspace/src && cd workspace/src
@@ -35,20 +39,25 @@ $ catkin_make
 
 ## Installation your environment
 ### Easy Installation
-`darknet`と`darknet_ros`をsubmoduleとして扱うためには, `--recursive`をつけて　cloneしてください.
-これによりsubmoduleである2つのリポジトリをまとめてcloneすることができます.
+To clone `darknet` and `darknet_ros` as a submodule, you must clone them with `--recursive`. This allows you to clone the two submodules together.
+<!-- `darknet`と`darknet_ros`をsubmoduleとして扱うためには, `--recursive`をつけて　cloneしてください.
+これによりsubmoduleである2つのリポジトリをまとめてcloneすることができます. -->
 ```bash
 $ cd src
 $ git clone --recursive https://github.com/Tossy0423/yolov4-for-darknet_ros.git
 ```
 
-### `darknet`と`darknet_ros`をsubmoduleとして扱わずclone
-`darknet`と`darknet_ros`をsubmoduleとして扱わないためには, ２つのリポジトリを別々にcloneする必要があります.
+
+### If you don't use `darknet` and `darknet_ros` as a submodule
+<!-- ### `darknet`と`darknet_ros`をsubmoduleとして扱わずclone -->
+To avoid using `darknet` and `darknet_ros` as submodules, you need to clone the two repositories separately.
+<!-- `darknet`と`darknet_ros`をsubmoduleとして扱わないためには, ２つのリポジトリを別々にcloneする必要があります. -->
 ```bash
 $ git clone https://github.com/Tossy0423/darknet.git
 $ git clone https://github.com/Tossy0423/darknet_ros.git
 ```
-このやり方の場合, フォルダのツリー構造は以下のようになります,
+In this case, the tree structure of the folder looks like this.
+<!-- このやり方の場合, フォルダのツリー構造は以下のようになります. -->
 ```
 src
 ├── darknet
