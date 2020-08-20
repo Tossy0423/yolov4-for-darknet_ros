@@ -9,7 +9,9 @@
 </div>
 
 # YOLO V4 for darknet_ros
-YOLO V4をdarknet_rosへ移植して使えるようにした環境です.
+Thanks for taking a look at this repository!! <br>
+This repository is the environment of YOLO V4 ported to darknet_ros. <br>
+If you need the Japanese README file, please go [here](./documents/README_ja.md).
 
 
 
@@ -145,7 +147,7 @@ $ roslaunch darknet_ros yolo_v4.launch
 This software is released under the MIT License, see LICENSE.
 
 # Future Plans
-  私の気まぐれで改善していきます. 
+  私の気まぐれで改善していきます.
   - [ ] Rewrite the readme file in English. :earth_americas:
   - [ ] Getting your environment ready to run in the Docker Container. :whale:
 
