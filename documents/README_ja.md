@@ -4,8 +4,8 @@
 -->
 
 <div align = "center">
-<img src="readmemedia/birds.png" width=70%>
-<img src="readmemedia/people.png" width=70%>
+<img src="../readmemedia/birds.png" width=70%>
+<img src="../readmemedia/people.png" width=70%>
 </div>
 
 # YOLO V4 for darknet_ros
@@ -126,7 +126,7 @@ $ rosrun uvc_camera uvc_camera_node
 $ roslaunch darknet_ros yolo_v4.launch
 ```
 <div align=center>
-<img src="readmemedia/camera.png" width=90%>
+<img src="../readmemedia/camera.png" width=90%>
 </div>
 
 
