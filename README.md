@@ -16,7 +16,7 @@ If you need the Japanese README file, please go [here](./documents/README_ja.md)
 
 
 # Installation
-This repository assumes that the [Robot Operating System (ROS)](https://www.ros.org/) has already been installed on your environment. 
+This repository assumes that the [Robot Operating System (ROS)](https://www.ros.org/) has already been installed on your environment.
 See [ros.org](https://www.ros.org/install/) to know how to install ROS. My environment is [here](#Enviroment).
 
 <!-- このリポジトリを導入する環境では, すでに[ROS(Robot Operating System)](https://www.ros.org/)が導入されていることとします. ROSの導入方法は[ros.org](https://www.ros.org/install/)を参考にしてください. 私の[構築環境](#Environment)はこちらです. -->
@@ -48,22 +48,22 @@ $ git clone --recursive https://github.com/Tossy0423/yolov4-for-darknet_ros.git
 ```
 
 
-### If you don't use `darknet` and `darknet_ros` as a submodule
-<!-- ### `darknet`と`darknet_ros`をsubmoduleとして扱わずclone -->
+<!-- ### If you don't use `darknet` and `darknet_ros` as a submodule
+### `darknet`と`darknet_ros`をsubmoduleとして扱わずclone
 To avoid using `darknet` and `darknet_ros` as submodules, you need to clone the two repositories separately.
-<!-- `darknet`と`darknet_ros`をsubmoduleとして扱わないためには, ２つのリポジトリを別々にcloneする必要があります. -->
+`darknet`と`darknet_ros`をsubmoduleとして扱わないためには, ２つのリポジトリを別々にcloneする必要があります.
 ```bash
 $ git clone https://github.com/Tossy0423/darknet.git
 $ git clone https://github.com/Tossy0423/darknet_ros.git
 ```
 In this case, the tree structure of the folder looks like this.
-<!-- このやり方の場合, フォルダのツリー構造は以下のようになります. -->
+このやり方の場合, フォルダのツリー構造は以下のようになります.
 ```
 src
 ├── darknet
 │
 ├── darknet_ros
-```
+``` -->
 
 ## Download weights file
 The weights file is very large and needs to be downloaded separately.
@@ -177,6 +177,7 @@ This software is released under the MIT License, see LICENSE.
 # History
   - I've roughly summarized everything from environment building to manual creation(11. Aug. 2020)
   - Create an English version of the README(20. Aug. 2020)
+  - Moved `/root/darknet` to `/root/darknet/darknet/darknet_ros` due to redundant file structure.(31. Aug. 2020)
 
 # Autor
 Tossy
